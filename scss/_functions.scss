@@ -1,0 +1,14 @@
+@function em($target, $context: 16){
+  @return ($target / $context) +em;
+}
+
+@mixin clearfix{
+	&:before,
+	&:after { content: " "; display: table; }
+	&:after { clear: both; }
+}
+
+@mixin container( $width ) {
+	max-width: $width;
+	margin: 0 auto;
+}
